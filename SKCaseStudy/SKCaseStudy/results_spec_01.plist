@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>minTestsPerDay</key>
+	<integer>0</integer>
+	<key>maxTestsPerDay</key>
+	<integer>2</integer>
+	<key>startDate</key>
+	<date>2017-05-14T19:27:11Z</date>
+	<key>download</key>
+	<dict>
+		<key>minMbps</key>
+		<integer>10</integer>
+		<key>maxMbps</key>
+		<integer>70</integer>
+	</dict>
+	<key>upload</key>
+	<dict>
+		<key>minMbps</key>
+		<integer>10</integer>
+		<key>maxMbps</key>
+		<integer>20</integer>
+	</dict>
+	<key>jitter</key>
+	<dict>
+		<key>minSecs</key>
+		<real>0.02</real>
+		<key>maxSecs</key>
+		<real>0.3</real>
+	</dict>
+	<key>webBrowsing</key>
+	<dict>
+		<key>minSecs</key>
+		<real>0.1</real>
+		<key>maxSecs</key>
+		<integer>3</integer>
+	</dict>
+	<key>latency</key>
+	<dict>
+		<key>minSecs</key>
+		<real>0.02</real>
+		<key>maxSecs</key>
+		<real>0.7</real>
+	</dict>
+	<key>packetLoss</key>
+	<dict>
+		<key>min</key>
+		<integer>0</integer>
+		<key>max</key>
+		<integer>2</integer>
+	</dict>
+	<key>youtube</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+		<integer>3</integer>
+	</array>
+</dict>
+</plist>

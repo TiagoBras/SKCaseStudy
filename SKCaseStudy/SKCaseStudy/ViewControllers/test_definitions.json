@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Download",
+        "icon": "s_icon_download",
+        "text": "The speed data travels from our test server to your device, measured in bytes per second."
+    },
+    {
+        "title": "Upload",
+        "icon": "s_icon_upload",
+        "text": "The speed data travels from your device to our test server, measured in byes per second."
+    },
+    {
+        "title": "Packet loss",
+        "icon": "s_icon_packetloss",
+        "text": "When a packet of data becomes lost (does not arrive for two seconds), measured as a percentage of packets lost out of packets sent."
+    },
+    {
+        "title": "Data delay",
+        "icon": "s_icon_latency",
+        "text": "How long it takes a data packet to go from your device to our test server and back to your device. Time shown in milliseconds."
+    },
+    {
+        "title": "Jitter",
+        "icon": "s_icon_jitter",
+        "text": "Measures the amount of difference between packet delays, or the stability of your latency. Time shown in milliseconds."
+    },
+    {
+        "title": "YouTube",
+        "icon": "s_icon_youtube",
+        "text": "Measures the highest bitrate you can reliably stream of the most popular video in your country."
+    },
+    {
+        "title": "Web browsing",
+        "icon": "s_icon_webbrowsing",
+        "text": "Measures how long it takes to fetch the HTML and referenced resources of a popular website."
+    }
+]

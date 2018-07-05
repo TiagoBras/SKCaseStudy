@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="ResultsTableViewCell" customModule="SKCaseStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="80.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m_icon_download" translatesAutoresizingMaskIntoConstraints="NO" id="AZh-gM-vTy">
+                        <rect key="frame" x="16" y="15.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="aFr-WB-RGk"/>
+                            <constraint firstAttribute="width" constant="50" id="yP4-l9-ZZ8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.67Mbps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-mX-81T">
+                        <rect key="frame" x="66" y="22" width="130" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="ycY-xa-9sh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" name="testDownloadColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-ju-iVV">
+                        <rect key="frame" x="204" y="17" width="179" height="46.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test ID: 2318978936" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-Rc-MVF">
+                                <rect key="frame" x="0.0" y="0.0" width="136" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="mainTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test time: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eww-b8-vZ6">
+                                <rect key="frame" x="0.0" y="27" width="75" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="mainTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="G9E-ju-iVV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="431-7z-Z04"/>
+                    <constraint firstItem="AZh-gM-vTy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Ecg-Za-Yum"/>
+                    <constraint firstAttribute="trailing" secondItem="G9E-ju-iVV" secondAttribute="trailing" id="Qz4-Gs-NnT"/>
+                    <constraint firstItem="G9E-ju-iVV" firstAttribute="leading" secondItem="dAG-mX-81T" secondAttribute="trailing" constant="8" id="TRo-vp-ZoA"/>
+                    <constraint firstItem="dAG-mX-81T" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YmY-7B-gK5"/>
+                    <constraint firstItem="dAG-mX-81T" firstAttribute="leading" secondItem="AZh-gM-vTy" secondAttribute="trailing" id="vo5-l4-8VB"/>
+                    <constraint firstItem="AZh-gM-vTy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yhP-jX-VMW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="dAG-mX-81T" id="2Jq-qg-Ull"/>
+                <outlet property="dateLabel" destination="Eww-b8-vZ6" id="BmP-ww-GBq"/>
+                <outlet property="iconImageView" destination="AZh-gM-vTy" id="SuG-fC-RlW"/>
+                <outlet property="idLabel" destination="jGw-Rc-MVF" id="CMU-EZ-wXE"/>
+            </connections>
+            <point key="canvasLocation" x="65.5" y="72.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="m_icon_download" width="25" height="25"/>
+        <namedColor name="mainTextColor">
+            <color red="0.25900000333786011" green="0.3880000114440918" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="testDownloadColor">
+            <color red="0.96100002527236938" green="0.80000001192092896" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

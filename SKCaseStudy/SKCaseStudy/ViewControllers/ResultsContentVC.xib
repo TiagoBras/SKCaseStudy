@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsContentVC" customModule="SKCaseStudy" customModuleProvider="target">
+            <connections>
+                <outlet property="averageLabel" destination="wNy-kN-N8d" id="KNN-Cd-jur"/>
+                <outlet property="averageUnitsLabel" destination="LHo-tE-zPr" id="l53-Kd-XiN"/>
+                <outlet property="barChartView" destination="IOQ-eb-Iky" id="mKg-At-a6Q"/>
+                <outlet property="iconImageView" destination="w04-Jt-YWl" id="f80-Qw-Lp8"/>
+                <outlet property="tableView" destination="OnX-ii-Bjj" id="1di-Eh-bpz"/>
+                <outlet property="titleLabel" destination="h1c-6P-dMc" id="dUo-N0-Z9e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-hy-9K0">
+                    <rect key="frame" x="20" y="30" width="187" height="29"/>
+                    <segments>
+                        <segment title="Week"/>
+                        <segment title="Month"/>
+                        <segment title="Year"/>
+                    </segments>
+                    <color key="tintColor" name="mainColor"/>
+                    <connections>
+                        <action selector="timePeriodValuedChanged:" destination="-1" eventType="valueChanged" id="P90-0O-ujA"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-49-6s3">
+                    <rect key="frame" x="217" y="30" width="138" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="138" id="sY1-He-6cX"/>
+                    </constraints>
+                    <segments>
+                        <segment title="" image="sc_icon_wifi"/>
+                        <segment title="" image="sc_icon_cellular"/>
+                    </segments>
+                    <color key="tintColor" name="mainColor"/>
+                    <connections>
+                        <action selector="connectionTypeValueChanged:" destination="-1" eventType="valueChanged" id="boi-od-1Aa"/>
+                    </connections>
+                </segmentedControl>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m_icon_upload" translatesAutoresizingMaskIntoConstraints="NO" id="w04-Jt-YWl">
+                    <rect key="frame" x="20" y="75" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="5fm-ZI-2DI"/>
+                        <constraint firstAttribute="width" constant="43" id="y5d-81-Ul7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1c-6P-dMc">
+                    <rect key="frame" x="72" y="90" width="48" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNy-kN-N8d">
+                    <rect key="frame" x="241" y="80.5" width="74" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <color key="textColor" name="testUploadColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mbps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-tE-zPr">
+                    <rect key="frame" x="321" y="102.5" width="34" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="testUploadColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IOQ-eb-Iky" customClass="BarChartView" customModule="Designables">
+                    <rect key="frame" x="5" y="138" width="365" height="220"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="5To-4y-Tfs"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-ii-Bjj">
+                    <rect key="frame" x="0.0" y="359" width="375" height="308"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ra5-5k-9cX"/>
+                        <outlet property="delegate" destination="-1" id="Ph5-LG-13x"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h1c-6P-dMc" firstAttribute="top" secondItem="rCd-hy-9K0" secondAttribute="bottom" constant="32" id="4QC-H7-CZc"/>
+                <constraint firstItem="OnX-ii-Bjj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5JJ-f5-Om6"/>
+                <constraint firstItem="rCd-hy-9K0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="C4n-z1-ytM"/>
+                <constraint firstItem="IOQ-eb-Iky" firstAttribute="top" secondItem="w04-Jt-YWl" secondAttribute="bottom" constant="20" id="H65-Se-qKR"/>
+                <constraint firstItem="JvI-49-6s3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rCd-hy-9K0" secondAttribute="trailing" constant="10" id="K4v-Zm-ued"/>
+                <constraint firstItem="w04-Jt-YWl" firstAttribute="top" secondItem="rCd-hy-9K0" secondAttribute="bottom" constant="17" id="Mkf-xp-3F6"/>
+                <constraint firstItem="JvI-49-6s3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="NGN-OF-m3r"/>
+                <constraint firstItem="IOQ-eb-Iky" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="NbC-5r-DvE"/>
+                <constraint firstItem="OnX-ii-Bjj" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UhE-yE-61E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IOQ-eb-Iky" secondAttribute="trailing" constant="5" id="Wsw-Ju-7ux"/>
+                <constraint firstItem="LHo-tE-zPr" firstAttribute="baseline" secondItem="wNy-kN-N8d" secondAttribute="baseline" id="bWg-bB-49K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JvI-49-6s3" secondAttribute="trailing" constant="20" id="c69-Vd-vEh"/>
+                <constraint firstItem="h1c-6P-dMc" firstAttribute="leading" secondItem="rCd-hy-9K0" secondAttribute="leading" constant="52" id="eGT-kD-SFb"/>
+                <constraint firstItem="rCd-hy-9K0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jGU-Hr-otV"/>
+                <constraint firstItem="OnX-ii-Bjj" firstAttribute="top" secondItem="IOQ-eb-Iky" secondAttribute="bottom" constant="1" id="n7t-6H-X2U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LHo-tE-zPr" secondAttribute="trailing" constant="20" id="qpu-eT-nTQ"/>
+                <constraint firstItem="LHo-tE-zPr" firstAttribute="leading" secondItem="wNy-kN-N8d" secondAttribute="trailing" constant="6" id="rUI-3b-eeK"/>
+                <constraint firstItem="OnX-ii-Bjj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sQq-Ud-8zH"/>
+                <constraint firstItem="wNy-kN-N8d" firstAttribute="centerY" secondItem="h1c-6P-dMc" secondAttribute="centerY" id="vD7-LS-8hK"/>
+                <constraint firstItem="w04-Jt-YWl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zkJ-0S-c7h"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="m_icon_upload" width="29" height="26"/>
+        <image name="sc_icon_cellular" width="24" height="24"/>
+        <image name="sc_icon_wifi" width="24" height="18"/>
+        <namedColor name="mainColor">
+            <color red="0.21600000560283661" green="0.31000000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="testUploadColor">
+            <color red="0.94499999284744263" green="0.57599997520446777" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
